@@ -1,0 +1,8 @@
+.VScode/
+.DS_Store/
+*.iml
+*.xml
+.idea
+thumbs.db
+node_modules/**/*
+package-lock.json

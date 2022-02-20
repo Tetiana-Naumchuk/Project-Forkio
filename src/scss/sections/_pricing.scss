@@ -1,0 +1,332 @@
+.pricing {
+	text-align: center;
+	background-image: url(../img/pricing/pricing-tab.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	padding-bottom: 97px;
+	margin-top: -8px;
+
+	&__title {
+		@include repeat-title;
+		color: $whitecolor;
+		margin-bottom: 61px;
+		padding-top: 83px;
+	}
+
+	&__content {
+		@include flex;
+		margin-inline: 133px;
+		flex-wrap: nowrap;
+	}
+
+	&__students,
+	&__professional,
+	&__agency {
+		margin-right: 15px;
+		width: 257px;
+	}
+
+	&__students {
+		background: #ffffff;
+		mix-blend-mode: normal;
+		background-color: rgba(0, 0, 0, 0.11);
+		width: 257px;
+
+		&-header {
+			background: #ffffff;
+			mix-blend-mode: normal;
+			background-color: rgba(0, 0, 0, 0.06);
+		}
+
+		&-title {
+			@include students-title;
+			padding: 36px 58px;
+		}
+
+		&-text {
+			@include pricing;
+			padding: 30px 0 20px;
+
+			&--bold {
+				font-weight: bold;
+				font-family: $fontFamilyM;
+			}
+		}
+
+		&-subtext {
+			@include pricing-month;
+			padding-bottom: 38px;
+		}
+
+		&-underlihihg {
+			@include underlihihg;
+			margin-bottom: 36px;
+		}
+
+		&-support {
+			@include pricing-support;
+			padding-bottom: 62px;
+		}
+
+		&-btn {
+			background: #ffffff;
+			mix-blend-mode: normal;
+			background-color: rgba(0, 0, 0, 0.15);
+			@include pricing-btn;
+			padding: 15px 38px;
+			margin-bottom: 36px;
+		}
+	}
+
+	&__professional {
+		background: #ffffff;
+		mix-blend-mode: normal;
+		background-color: rgba(0, 0, 0, 0.11);
+		width: 257px;
+
+		&-header {
+			background: #ffffff;
+			mix-blend-mode: normal;
+			background-color: rgba(0, 0, 0, 0.06);
+		}
+
+		&-title {
+			@include students-title;
+			padding: 36px 30px;
+		}
+
+		&-text {
+			@include pricing;
+			padding: 30px 0 20px;
+
+			&--bold {
+				font-weight: bold;
+				font-family: $fontFamilyM;
+			}
+		}
+
+		&-subtext {
+			@include pricing-month;
+			padding-bottom: 38px;
+		}
+
+		&-underlihihg {
+			@include underlihihg;
+			margin-bottom: 30px;
+		}
+
+		&-support {
+			@include pricing-support;
+			text-align: center;
+			padding-bottom: 48px;
+		}
+
+		&-btn {
+			background: #ffffff;
+			mix-blend-mode: normal;
+			background-color: rgba(0, 0, 0, 0.15);
+			@include pricing-btn;
+			padding: 15px 38px;
+			margin-bottom: 36px;
+		}
+	}
+
+	&__agency {
+		background: #463048;
+		mix-blend-mode: normal;
+		background-color: rgba(0, 0, 0, 0.84);
+		width: 299px;
+
+		&-header {
+			background: #000000;
+			mix-blend-mode: normal;
+			background-color: rgba(0, 0, 0, 0.11);
+		}
+
+		&-title {
+			@include students-title;
+			padding: 43px 96px;
+		}
+
+		&-text {
+			@include pricing;
+			font-size: 82px;
+			padding: 14px 0 16px;
+
+			&--bold {
+				font-weight: bold;
+				font-family: $fontFamilyM;
+			}
+		}
+
+		&-subtext {
+			@include pricing-month;
+			padding-bottom: 46px;
+		}
+
+		&-underlihihg {
+			@include underlihihg;
+			margin-bottom: 40px;
+		}
+
+		&-support {
+			@include pricing-support;
+			text-align: center;
+			padding-bottom: 83px;
+		}
+
+		&-btn {
+			background: #ffffff;
+			mix-blend-mode: normal;
+			background-color: rgba(0, 0, 0, 0.15);
+			@include pricing-btn;
+			padding: 18px 48px;
+			margin-bottom: 47px;
+		}
+	}
+
+	&__enterprise {
+		background: #ffffff;
+		mix-blend-mode: normal;
+		background-color: rgba(0, 0, 0, 0.11);
+		border: 5px solid #ffffff;
+		width: 256px;
+
+		&-header {
+			background: #ffffff;
+			mix-blend-mode: normal;
+			background-color: rgba(0, 0, 0, 0.06);
+		}
+
+		&-title {
+			@include students-title;
+			padding: 36px 49px;
+		}
+
+		&-text {
+			@include pricing;
+			padding: 31px 0 20px;
+
+			&--bold {
+				font-weight: bold;
+				font-family: $fontFamilyM;
+			}
+		}
+
+		&-subtext {
+			@include pricing-month;
+			padding-bottom: 37px;
+		}
+
+		&-underlihihg {
+			@include underlihihg;
+			margin-bottom: 30px;
+		}
+
+		&-support {
+			@include pricing-support;
+			text-align: center;
+			padding-bottom: 36px;
+		}
+
+		&-btn {
+			background: #ffffff;
+			mix-blend-mode: normal;
+			background-color: rgba(0, 0, 0, 0.15);
+			@include pricing-btn;
+			padding: 15px 38px;
+			margin-bottom: 39px;
+		}
+	}
+}
+
+@media (min-width: 481px) and (max-width: 992px) {
+	.pricing {
+		padding-bottom: 94px;
+
+		&__title {
+			padding-top: 88px;
+			margin-bottom: 39px;
+			font-size: 42px;
+			line-height: 44px;
+		}
+
+		&__content {
+			margin-inline: 121px 109px;
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		&__students,
+		&__professional,
+		&__agency,
+		&__enterprise {
+			margin-right: 25px;
+		}
+
+		&__students {
+			margin-bottom: 30px;
+			margin-left: 40px;
+
+			&-title {
+				padding: 36px 60px;
+			}
+
+			&-underlihihg {
+				margin-bottom: 30px;
+			}
+
+			&-support {
+				padding-bottom: 68px;
+			}
+		}
+
+		&__professional {
+			margin-bottom: 41px;
+
+			&-title {
+				padding: 36px 29px;
+			}
+
+			&-text {
+				padding: 30px 0 20px;
+			}
+
+			&-support {
+				padding-bottom: 40px;
+			}
+		}
+	}
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+	.pricing {
+		padding-bottom: 18px;
+		margin-top: -15px;
+
+		&__title {
+			padding-top: 14px;
+			font-weight: bold;
+			font-size: 28px;
+			line-height: 42px;
+			color: #ffffff;
+			margin-bottom: 32px;
+		}
+
+		&__content {
+			flex-wrap: wrap;
+			margin-inline: 31px 32px;
+		}
+
+		&__students,
+		&__professional,
+		&__agency {
+			margin-bottom: 18px;
+		}
+
+		&__agency {
+			margin-inline: 10px 15px;
+		}
+	}
+}

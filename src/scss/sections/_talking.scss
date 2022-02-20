@@ -1,0 +1,95 @@
+.talking {
+	background-image: url(..//..//../dist/img/talking/talking_bg_2.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	.talking-title {
+		padding-top: 108px;
+		@include for-size(tablet) {
+			padding-top: 87px;
+		}
+		@include for-size(phone) {
+			padding-top: 57px;
+		}
+	}
+	&__title {
+		@include repeat-title;
+		text-align: center;
+		@include for-size(tablet) {
+			font-size: 42px;
+			line-height: 44px;
+		}
+		@include for-size(phone) {
+			font-size: 36px;
+			line-height: 48px;
+		}
+	}
+	&__wrapper {
+		padding-top: 82px;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		column-gap: 87px;
+		row-gap: 112px;
+		@include for-size(tablet) {
+			grid-template-columns: repeat(2, 1fr);
+			column-gap: 63px;
+			row-gap: 58px;
+		}
+		@include for-size(phone) {
+			grid-template-columns: repeat(1, 1fr);
+			row-gap: 45px;
+		}
+	}
+	.net {
+		&__logo {
+			@include flex;
+		}
+		&__text {
+			font-family: $fontFamilyL;
+			font-style: italic;
+			font-weight: bold;
+			font-size: 16px;
+			line-height: 24px;
+			color: #ffffff;
+			padding-top: 33px;
+			text-align: center;
+		}
+		&__text-3 {
+			padding-top: 22px;
+		}
+	}
+	&__text {
+		padding-top: 119px;
+		padding-bottom: 18px;
+		@include flex;
+		@include for-size(tablet) {
+			padding-top: 68px;
+		}
+		@include for-size(phone) {
+			padding-top: 37px;
+		}
+		.text {
+			font-family: $fontFamilyL;
+			font-size: 14px;
+			line-height: 21px;
+			text-align: center;
+			color: #a291a5;
+			@include flex;
+			max-width: 887px;
+		}
+	}
+	&__line {
+		@include flex;
+		padding-bottom: 29px;
+		.line {
+			width: 780px;
+			height: 2px;
+			background: #645766;
+			@include for-size(tablet) {
+				width: 555px;
+			}
+			@include for-size(phone) {
+				width: 245px;
+			}
+		}
+	}
+}

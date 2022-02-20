@@ -1,0 +1,70 @@
+@mixin flex($horizontal: center, $vertical: center) {
+	display: flex;
+	justify-content: $horizontal;
+	align-items: $vertical;
+}
+@mixin repeat-title {
+	font-family: $fontFamilyM;
+	font-weight: bold;
+	font-size: 48px;
+	line-height: 50px;
+	color: #ffffff;
+}
+@mixin students-title {
+	font-weight: normal;
+	font-size: 24px;
+	line-height: 24px;
+	text-transform: uppercase;
+	color: $whitecolor;
+}
+
+@mixin pricing {
+	font-weight: normal;
+	font-size: 60px;
+	line-height: 90px;
+	text-transform: uppercase;
+	color: $whitecolor;
+}
+
+@mixin pricing-month {
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 16px;
+	text-transform: uppercase;
+	color: $whitecolor;
+}
+
+@mixin underlihihg {
+	width: 60px;
+	height: 5px;
+	background: #8d81ac;
+	border: none;
+}
+
+@mixin pricing-support {
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 18px;
+	color: $whitecolor;
+}
+
+@mixin pricing-btn {
+	font-weight: normal;
+	font-size: 15px;
+	line-height: 15px;
+	text-transform: uppercase;
+	padding: 15px 38px;
+	border-radius: 40px;
+	color: $whitecolor;
+}
+@mixin for-size($size) {
+	@if $size == phone {
+		@media (min-width: 320px) and (max-width: 480px) {
+			@content;
+		}
+	} @else if $size == tablet {
+		@media (min-width: 481px) and (max-width: 992px) {
+			@content;
+		}
+	}
+}

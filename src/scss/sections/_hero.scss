@@ -1,0 +1,316 @@
+.hero {
+	background-image: url(../../../dist/img/hero/hero.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	.container {
+		@include for-size(tablet) {
+			width: 100%;
+		}
+	}
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		position: relative;
+		@include for-size(tablet) {
+			background: #27262a;
+			height: 118px;
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-areas:
+				'header-logo header-button'
+				'nav-menu__list nav-menu__list';
+			.header-logo {
+				grid-area: header-logo;
+			}
+			.header-button {
+				grid-area: header-button;
+			}
+			.nav-menu__list {
+				grid-area: nav-menu__list;
+			}
+		}
+		@include for-size(phone) {
+			background: #27262a;
+			height: 103px;
+		}
+	}
+	.header-logo {
+		display: flex;
+		margin-right: 312px;
+		&__img {
+			width: 43px;
+			height: 41px;
+			margin-top: 30px;
+			margin-right: 17px;
+			@include for-size(tablet) {
+				margin-top: 22px;
+			}
+			@include for-size(phone) {
+				margin-top: 32px;
+			}
+		}
+		&__text {
+			font-family: $fontFamilyL;
+			font-weight: bold;
+			font-size: 24px;
+			line-height: 16px;
+			color: $violetColor;
+			margin-top: 45px;
+			text-transform: uppercase;
+			@include for-size(tablet) {
+				margin-top: 37px;
+			}
+			@include for-size(phone) {
+				display: none;
+			}
+		}
+		&__text:hover {
+			color: $whitecolor;
+		}
+	}
+	.nav-menu {
+		&__list {
+			display: flex;
+			@include for-size(tablet) {
+				@include flex;
+				padding-bottom: 18px;
+			}
+			@include for-size(phone) {
+				display: none;
+			}
+		}
+		&__item {
+			padding-top: 41px;
+			padding-right: 48px;
+			@include for-size(tablet) {
+				padding-top: 0px;
+			}
+		}
+		&__link {
+			font-family: $fontFamilyM;
+			color: $violetColor;
+			font-weight: bold;
+			font-size: 16px;
+			line-height: 15px;
+		}
+		&__link:hover {
+			color: $whitecolor;
+		}
+	}
+	.hamburger-menu {
+		display: none;
+		@include for-size(phone) {
+			display: block;
+		}
+	}
+	#menu__toggle {
+		display: none;
+	}
+	#menu__toggle:checked ~ .menu__btn > span {
+		transform: rotate(45deg);
+	}
+	#menu__toggle:checked ~ .menu__btn > span::before {
+		top: 0;
+		transform: rotate(0);
+	}
+	#menu__toggle:checked ~ .menu__btn > span::after {
+		top: 0;
+		transform: rotate(90deg);
+	}
+	#menu__toggle:checked ~ .menu__list {
+		visibility: visible;
+		left: 0;
+	}
+	.menu__btn {
+		align-items: center;
+		position: absolute;
+		top: 40px;
+		left: calc(100% - 35px);
+		width: 26px;
+		height: 26px;
+		cursor: pointer;
+		z-index: 1;
+	}
+	.menu__btn > span,
+	.menu__btn > span::after {
+		display: block;
+		position: absolute;
+		width: 26px;
+		height: 3px;
+		background: #ffffff;
+		border-radius: 5px;
+		transition-duration: 0.25s;
+	}
+	.menu__btn > span::before {
+		display: block;
+		position: absolute;
+		content: '';
+		top: -8px;
+		width: 15px;
+		height: 3px;
+		background: #ffffff;
+		border-radius: 5px;
+	}
+	.menu__btn > span::after {
+		content: '';
+		top: 8px;
+	}
+	.menu__list {
+		position: absolute;
+		visibility: hidden;
+		top: 102px;
+		left: -100%;
+		width: 292px;
+		transition-duration: 0.25s;
+		margin-left: 14px;
+	}
+	.menu__link {
+		display: block;
+		padding: 29px 50px 21px 35px;
+		font-size: 26px;
+		color: #ffffff;
+		font-family: $fontFamilyM;
+		text-decoration: none;
+		transition-duration: 0.25s;
+		background: #333333;
+		border-bottom: 3px solid #3b3b3b;
+		position: relative;
+	}
+	.menu__item-last::after {
+		content: '';
+		position: absolute;
+		width: 292px;
+		height: 14px;
+		background: #333333;
+	}
+	.menu__link:active {
+		color: $violetColor;
+	}
+	.menu__item:active .menu__link::after {
+		opacity: 1;
+	}
+	.menu__link::after {
+		content: '';
+		position: absolute;
+		width: 8px;
+		height: 53px;
+		background: $violetColor;
+		left: 0px;
+		top: calc((100% - 53px) / 2);
+		opacity: 0;
+	}
+
+	.header-button {
+		@include for-size(tablet) {
+			display: flex;
+			justify-content: flex-end;
+		}
+		&__btn {
+			width: 145px;
+			height: 37px;
+			background: $violetColor;
+			border-radius: 40px;
+			border: none;
+			margin-top: 31px;
+			font-weight: bold;
+			font-size: 16px;
+			line-height: 17px;
+			color: $whitecolor;
+			@include flex;
+			@include for-size(phone) {
+				width: 119px;
+				height: 37px;
+				position: absolute;
+				right: calc((100% - 119px) / 2);
+			}
+		}
+	}
+	.header-button__btn:hover {
+		background: $whitecolor;
+		color: $violetColor;
+		border: 1px solid $violetColor;
+	}
+	&__main {
+		padding-top: 183px;
+		padding-bottom: 540px;
+		.main__title {
+			font-family: $fontFamilyM;
+			font-weight: bold;
+			font-size: 82px;
+			color: $whitecolor;
+			text-align: center;
+			padding-bottom: 19px;
+			@include for-size(tablet) {
+				font-size: 72px;
+			}
+			@include for-size(phone) {
+				font-size: 48px;
+			}
+		}
+		.main__subtitle {
+			font-family: $fontFamilyL;
+			font-size: 30px;
+			text-align: center;
+			color: $violetColor;
+			padding-bottom: 19px;
+			display: block;
+			@include for-size(tablet) {
+				font-size: 24px;
+			}
+			@include for-size(phone) {
+				font-size: 18px;
+				line-height: 24px;
+				text-transform: capitalize;
+			}
+		}
+		.main__text {
+			font-family: $fontFamilyM;
+			font-size: 16px;
+			text-transform: uppercase;
+			color: #848e97;
+			text-align: center;
+			@include for-size(tablet) {
+				font-size: 14px;
+			}
+			@include for-size(phone) {
+				font-size: 14px;
+			}
+		}
+	}
+}
+.button-between {
+	@include flex;
+	transform: translateY(-50%);
+	&__btn {
+		width: 390px;
+		height: 62px;
+		background: $violetColor;
+		border-radius: 40px;
+		@include flex;
+		border: none;
+		font-family: $fontFamilyM;
+		font-weight: bold;
+		font-size: 21px;
+		line-height: 22px;
+		color: #ffffff;
+		@include for-size(phone) {
+			width: 290px;
+			height: 45px;
+			font-size: 18px;
+			line-height: 20px;
+		}
+	}
+	&__btn:hover {
+		background: $whitecolor;
+		color: $violetColor;
+		border: 2px solid $violetColor;
+	}
+}
+.header-logo:hover .header-logo__img {
+	content: url(../../../dist/img/hero/logo-hover.png);
+}
+.header-logo:hover .header-logo__text {
+	color: $whitecolor;
+	cursor: pointer;
+}

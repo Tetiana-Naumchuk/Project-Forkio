@@ -1,0 +1,130 @@
+.editor {
+	&__subtitle {
+		@include flex;
+		font-size: 14px;
+		line-height: 15px;
+		margin-bottom: 66px;
+		color: $editorSubtitle-color;
+	}
+
+	&__section {
+		&-title {
+			font-family: $fontFamilyM;
+			@include flex;
+			font-weight: bold;
+			font-size: 54px;
+			line-height: 54px;
+			text-transform: uppercase;
+			color: $editorTitle-color;
+			margin-bottom: 35px;
+			text-align: center;
+		}
+
+		&-text {
+			font-family: $fontFamilyL;
+			@include flex;
+			text-align: center;
+			font-size: 21px;
+			line-height: 32px;
+			color: $editorText-color;
+			margin-bottom: 13px;
+			padding: 0 282px 0 237px;
+		}
+	}
+
+	&__button {
+		@include flex;
+		margin-bottom: 70px;
+
+		&-item {
+			@include flex;
+			border-radius: 5px;
+			border: 1px solid #848e97;
+			margin-right: 8px;
+
+			&-link {
+				@include flex;
+				text-decoration: none;
+				text-align: center;
+				font-family: $fontFamilyM;
+				color: $editorText-color;
+				border-right: 1px solid #848e97;
+				padding: 8px;
+				font-weight: bold;
+				background-color: #f4f4f4;
+			}
+
+			&-text {
+				padding: 8px;
+				font-weight: bold;
+			}
+
+			&-wrap {
+				margin-right: 6px;
+			}
+		}
+	}
+}
+
+@media (min-width: 481px) and (max-width: 992px) {
+	.editor {
+		&__subtitle {
+			margin-bottom: 93.5px;
+		}
+
+		&__section {
+			&-title {
+				font-size: 42px;
+				line-height: 42px;
+				margin-bottom: 33px;
+			}
+
+			&-text {
+				margin-bottom: 24px;
+				padding-inline: 40px;
+			}
+		}
+
+		&__button {
+			margin-bottom: 98px;
+		}
+	}
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+	.editor {
+		&__subtitle {
+			margin-bottom: 79.5px;
+		}
+
+		&__section {
+			&-title {
+				font-size: 26px;
+				line-height: 28px;
+				margin-bottom: 27px;
+			}
+
+			&-text {
+				font-size: 14px;
+				line-height: 28px;
+				margin-bottom: 36px;
+				padding: 0 18px 0 26px;
+			}
+		}
+
+		&__button {
+			width: 100%;
+			flex-wrap: wrap;
+			margin-bottom: 88px;
+			&-item {
+				margin-right: 0px;
+			}
+			&-item:first-child {
+				margin-right: 8px;
+			}
+		}
+		&__button-item-mob {
+			margin-top: 20px;
+		}
+	}
+}
